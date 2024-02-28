@@ -8,13 +8,6 @@ import { routes } from './routes'
 import  SwaggerUi from 'swagger-ui-express'
 import SwaggerSetup from './docs/swagger'
 
-
-
-
-
-
-
-
 export class Server{
     private app:Express;
 
