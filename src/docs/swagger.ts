@@ -8,7 +8,7 @@ const swaggerDefinition : OAS3Definition = {
     },
     servers:[
         {
-            url:"http://localhost:5000",
+            url:"https://scaling-dollop-69gxx9g7vr7hwqq-5000.app.github.dev/",
 
         },
     ],
