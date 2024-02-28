@@ -12,9 +12,22 @@ export const taskController = {
       })
     }
   },
+  getOneTask: async(req:Request, res:Response)=>{
+    try {
+      const {id} = req.params;
+
+      const data = await taskService.getOne(id);
+      return res.json(data);
+    } catch (error:any) {
+      res.status(400).json({
+        message: error.message
+      })
+    }
+  },
+
+  
 
   create: async(req:Request, res:Response)=>{
-    console.log("Valio vrfa");
 
     try {
       const data = await taskService.create(req.body);

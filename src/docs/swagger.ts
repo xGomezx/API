@@ -16,8 +16,11 @@ const swaggerDefinition : OAS3Definition = {
         schemas:{
             task:{
                 type:"object",
-                required:["name","description","status"],
+                required:["_id","name","description","status"],
                 properties:{
+                    _id:{
+                        type:"string",
+                    },
                     name:{
                         type:"string",
                     },

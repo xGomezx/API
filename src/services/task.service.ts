@@ -4,7 +4,9 @@ export const taskService = {
   getAll: async()=>{
     return await TaskModel.find();
   },
-
+  getOne: async(id:string)=>{
+    return await TaskModel.findById(id);
+  },
   create: async(entity: object)=>{
     return await TaskModel.create(entity);
   },

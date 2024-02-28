@@ -4,12 +4,12 @@ import cors from 'cors'
 import {PORT} from './config'
 import {conectBD} from './database'
 import { routes } from './routes'
-const app: Express = express()
+
 import  SwaggerUi from 'swagger-ui-express'
 import SwaggerSetup from './docs/swagger'
 
 
-app.use('/documentation',SwaggerUi.serve, SwaggerUi.setup(SwaggerSetup))
+
 
 
 
@@ -40,9 +40,9 @@ export class Server{
             res.json({
                 name:'API REST'
             })
-        })
+        }) 
   
-
+        this.app.use('/documentation',SwaggerUi.serve, SwaggerUi.setup(SwaggerSetup))
         this.app.use('/api',routes.TaskRoute)
     }
 
